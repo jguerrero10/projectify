@@ -1,1 +1,1 @@
-web: gunicorn proyectify.wsgi --log-file -
+web: gunicorn projectify.wsgi --log-file -
