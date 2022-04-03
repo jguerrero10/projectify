@@ -1,0 +1,523 @@
+{
+	"info": {
+		"_postman_id": "f1ed2f87-9b79-402f-8cb8-58480cac0a12",
+		"name": "collectionPostman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Token",
+			"item": [
+				{
+					"name": "Obtener Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "us3rPrueb@",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://proyectifyapp.herokuapp.com/api/token/",
+							"protocol": "http",
+							"host": [
+								"proyectifyapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"token",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Token Refresh",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "refresh",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY0ODk4NzgxNSwiaWF0IjoxNjQ4OTAxNDE1LCJqdGkiOiIyNTBlOTU5NzJkMjc0Y2RhOTJmMGM2MTZhM2QzYmY0ZiIsInVzZXJfaWQiOjR9.GotyI704GcGVj5mVBSVTCBHQWCP2HniMRk1Q3xbO4sI",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://proyectifyapp.herokuapp.com/api/token/refresh/",
+							"protocol": "https",
+							"host": [
+								"proyectifyapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"token",
+								"refresh",
+								""
+							],
+							"query": [
+								{
+									"key": "refresh",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4OTMwMzkyLCJpYXQiOjE2NDg5MjY3OTIsImp0aSI6IjU3OGM5NmE1YTRiODQ0YzhhMzZhMzA1NjA3ZmViMDdkIiwidXNlcl9pZCI6MX0.eT5mFp4JmloFSN5-vBFFnZ7_YsjBLLqdwLI1R7NlI-c",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OperationalUser",
+			"item": [
+				{
+					"name": "List Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4OTMwNzE0LCJpYXQiOjE2NDg5MjcxMTQsImp0aSI6IjhmMzhkZjk1YWUzNjQ2MDFiMGQ1NWUzNzI1ODFkZjRiIiwidXNlcl9pZCI6MX0.iLkXYNLAYUZrgWZ4aEMfSAp--BDnD7MAx6lpjKf4QUA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://proyectifyapp.herokuapp.com/api/operational-user/",
+							"protocol": "https",
+							"host": [
+								"proyectifyapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"operational-user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4OTMwNzE0LCJpYXQiOjE2NDg5MjcxMTQsImp0aSI6IjhmMzhkZjk1YWUzNjQ2MDFiMGQ1NWUzNzI1ODFkZjRiIiwidXNlcl9pZCI6MX0.iLkXYNLAYUZrgWZ4aEMfSAp--BDnD7MAx6lpjKf4QUA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "joelUser",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234567",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "joel@correo.com",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "Joel",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "prueba",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://proyectifyapp.herokuapp.com/api/operational-user/",
+							"protocol": "https",
+							"host": [
+								"proyectifyapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"operational-user",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "List Projects",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4OTMwNzE0LCJpYXQiOjE2NDg5MjcxMTQsImp0aSI6IjhmMzhkZjk1YWUzNjQ2MDFiMGQ1NWUzNzI1ODFkZjRiIiwidXNlcl9pZCI6MX0.iLkXYNLAYUZrgWZ4aEMfSAp--BDnD7MAx6lpjKf4QUA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://proyectifyapp.herokuapp.com/api/project/",
+							"protocol": "https",
+							"host": [
+								"proyectifyapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"project",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4OTMwNzE0LCJpYXQiOjE2NDg5MjcxMTQsImp0aSI6IjhmMzhkZjk1YWUzNjQ2MDFiMGQ1NWUzNzI1ODFkZjRiIiwidXNlcl9pZCI6MX0.iLkXYNLAYUZrgWZ4aEMfSAp--BDnD7MAx6lpjKf4QUA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Project Prueba",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Descripción de los Proyectos de Prueba",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://proyectifyapp.herokuapp.com/api/project/",
+							"protocol": "https",
+							"host": [
+								"proyectifyapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"project",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4OTMwNzE0LCJpYXQiOjE2NDg5MjcxMTQsImp0aSI6IjhmMzhkZjk1YWUzNjQ2MDFiMGQ1NWUzNzI1ODFkZjRiIiwidXNlcl9pZCI6MX0.iLkXYNLAYUZrgWZ4aEMfSAp--BDnD7MAx6lpjKf4QUA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://proyectifyapp.herokuapp.com/api/project/1",
+							"protocol": "https",
+							"host": [
+								"proyectifyapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"project",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4OTMwNzE0LCJpYXQiOjE2NDg5MjcxMTQsImp0aSI6IjhmMzhkZjk1YWUzNjQ2MDFiMGQ1NWUzNzI1ODFkZjRiIiwidXNlcl9pZCI6MX0.iLkXYNLAYUZrgWZ4aEMfSAp--BDnD7MAx6lpjKf4QUA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Project001",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Projecto para Prueba",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://proyectifyapp.herokuapp.com/api/project/1/",
+							"protocol": "https",
+							"host": [
+								"proyectifyapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"project",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dedication",
+			"item": [
+				{
+					"name": "List Dedications",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4OTMwNzE0LCJpYXQiOjE2NDg5MjcxMTQsImp0aSI6IjhmMzhkZjk1YWUzNjQ2MDFiMGQ1NWUzNzI1ODFkZjRiIiwidXNlcl9pZCI6MX0.iLkXYNLAYUZrgWZ4aEMfSAp--BDnD7MAx6lpjKf4QUA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://proyectifyapp.herokuapp.com/api/dedication/",
+							"protocol": "https",
+							"host": [
+								"proyectifyapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"dedication",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Dedications",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4OTMwNzE0LCJpYXQiOjE2NDg5MjcxMTQsImp0aSI6IjhmMzhkZjk1YWUzNjQ2MDFiMGQ1NWUzNzI1ODFkZjRiIiwidXNlcl9pZCI6MX0.iLkXYNLAYUZrgWZ4aEMfSAp--BDnD7MAx6lpjKf4QUA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "project",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2022-07-01",
+									"type": "text"
+								},
+								{
+									"key": "dedicacion",
+									"value": "50",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://proyectifyapp.herokuapp.com/api/dedication/",
+							"protocol": "https",
+							"host": [
+								"proyectifyapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"dedication",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Dedication",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4OTMwNzE0LCJpYXQiOjE2NDg5MjcxMTQsImp0aSI6IjhmMzhkZjk1YWUzNjQ2MDFiMGQ1NWUzNzI1ODFkZjRiIiwidXNlcl9pZCI6MX0.iLkXYNLAYUZrgWZ4aEMfSAp--BDnD7MAx6lpjKf4QUA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://proyectifyapp.herokuapp.com/api/dedication/1",
+							"protocol": "https",
+							"host": [
+								"proyectifyapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"dedication",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Dedication",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4OTMwNzE0LCJpYXQiOjE2NDg5MjcxMTQsImp0aSI6IjhmMzhkZjk1YWUzNjQ2MDFiMGQ1NWUzNzI1ODFkZjRiIiwidXNlcl9pZCI6MX0.iLkXYNLAYUZrgWZ4aEMfSAp--BDnD7MAx6lpjKf4QUA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "dedicacion",
+									"value": "75",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://proyectifyapp.herokuapp.com/api/dedication/1/",
+							"protocol": "https",
+							"host": [
+								"proyectifyapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"dedication",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
