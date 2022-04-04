@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-a5q1*@a32=$)&t3f+-m1sna&fr^1+5z=%jwtdxf&#+!gnd+0#f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -122,18 +122,18 @@ WSGI_APPLICATION = 'projectify.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-}
+}"""
 
-"""DATABASES = {
+DATABASES = {
     'default': dj_database_url.config(
         default=config('DATABASE_URL')
     )
-}"""
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
