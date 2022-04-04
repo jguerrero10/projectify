@@ -23,4 +23,4 @@ class Dedication(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
     date = models.DateField()
     isoweek = models.CharField(max_length=12, unique=True)
-    dedicacion = models.IntegerField()
+    dedication = models.PositiveIntegerField()
